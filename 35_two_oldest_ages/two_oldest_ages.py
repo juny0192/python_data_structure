@@ -1,3 +1,4 @@
+
 def two_oldest_ages(ages):
     """Return two distinct oldest ages as tuple (second-oldest, oldest)..
 
@@ -21,3 +22,13 @@ def two_oldest_ages(ages):
     # you may find it helpful to research the `sorted(iter)` function, which
     # can take *any* type of list-like-thing, and returns a new, sorted list
     # from it.
+
+    lst = sorted(ages)
+    first = lst[-1]
+    second = lst[-2]
+
+    if first == second:
+        second = lst[-3]
+        return (second, first)
+    else: 
+        return (second, first)

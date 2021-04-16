@@ -1,3 +1,5 @@
+
+
 def find_the_duplicate(nums):
     """Find duplicate number in nums.
 
@@ -13,3 +15,11 @@ def find_the_duplicate(nums):
         >>> find_the_duplicate([2, 1, 3, 4]) is None
         True
     """
+    lst = []
+
+    for num in nums:
+        if num in lst:
+            return num      
+        else:
+            lst.append(num)
+
