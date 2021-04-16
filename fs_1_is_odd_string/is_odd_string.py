@@ -11,7 +11,7 @@ def is_odd_string(word):
         >>> is_odd_string('a')
         True
 
-        >>> is_odd_string('A')
+        >>> is_odd_string('A')›
         True
 
     These sum to 4, which is not odd:
@@ -27,5 +27,18 @@ def is_odd_string(word):
         >>> is_odd_string('amazing')
         True
     """
-
     # Hint: you may find the ord() function useful here
+
+    total = 0
+    low_word = word.lower() # all lower
+
+    for char in low_word:
+        char = ord(char) # char is each number of each character (97 ~ 122)
+        total += (char - 96)
+        
+    if total % 2 == 0:
+        return False
+    else:
+        return True
+
+    
